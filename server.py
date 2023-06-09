@@ -51,7 +51,7 @@ def image_predict():
         lokasi = "lokasi tidak ada di database"
 
     # Return the predicted class label as a response
-    return jsonify(Lokasi={lokasi})
+    return jsonify(Lokasi= lokasi)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port= os.environ.get('PORT', 8080))
