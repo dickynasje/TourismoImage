@@ -33,7 +33,6 @@ def image_predict():
     imagearr = np.expand_dims(imagearr, axis=0)
     images = np.vstack([imagearr])
     
-
     # Perform prediction using the loaded model
     prediction = model.predict(images, batch_size=10)
     output = np.argmax(prediction)
@@ -53,3 +52,6 @@ def image_predict():
 
     # Return the predicted class label as a response
     return f'Lokasi: {lokasi}'
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port= os.environ.get('PORT', 8080))
